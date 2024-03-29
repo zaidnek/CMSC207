@@ -1,0 +1,7 @@
+{% load formly %}
+
+<form method="post" action="{% url 'submit_response' %}">
+    {% csrf_token %}
+    {% formly form %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

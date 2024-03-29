@@ -1,0 +1,7 @@
+<!-- likert_scale.html -->
+<div class="likert-scale">
+    {% for choice in choices %}
+        <input type="radio" id="id_{{ field.key }}_{{ choice.value }}" name="{{ field.key }}" value="{{ choice.value }}" class="form-check-input">
+        <label for="id_{{ field.key }}_{{ choice.value }}" class="form-check-label">{{ choice.label }}</label>
+    {% endfor %}
+</div>
